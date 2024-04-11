@@ -1,7 +1,7 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Proxy",
-  "version": "28",
+  "version": "28.0.0",
   "options_page": "options.html",
   "options_ui": {
     "chrome_style": true,
@@ -10,6 +10,7 @@
   "permissions": [
     "tabs",
     "proxy",
+    "unlimitedStorage",
     "storage",
     "webRequest",
     "webRequestBlocking",
@@ -18,9 +19,7 @@
     "https://*/*"
   ],
   "background": {
-    "scripts":
-    [
-      "js/background.js"
-    ]
-  }
+    "service_worker": "background.js"
+  },
+  "minimum_chrome_version":"22.0.0"
 }
